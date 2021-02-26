@@ -1,0 +1,111 @@
+#parallax {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s;
+    z-index: -1;
+
+    .layer {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transition: all 0.2s;
+    }
+
+    .layer-0 {
+        top: -40vh;
+        left: 90vh;
+
+        i {
+            color: $blue;
+        }
+    }
+
+    .layer-1 {
+        top: -20vh;
+        left: -25vh;
+
+        i {
+            color: $red;
+        }
+    }
+
+    .layer-2 {
+        top: 25vh;
+        left: 55vh;
+
+        i {
+            color: $blue;
+        }
+    }
+
+    .layer-3 {
+        top: 15vh;
+        left: -45vh;
+
+        i {
+            color: $green;
+        }
+    }
+
+    .layer-4 {
+        top: -5vh;
+        left: 75vh;
+
+        i {
+            color: $green;
+        }
+    }
+
+    .layer-5 {
+        top: -40vh;
+        left: -60vh;
+
+        i {
+            color: $yellow;
+        }
+    }
+
+    .layer-6 {
+        top: 35vh;
+        left: 95vh;
+
+        i {
+            color: $yellow;
+        }
+    }
+
+    .layer-7 {
+        top: 35vh;
+        left: 0vh;
+
+        i {
+            color: $red;
+        }
+    }
+
+    .layer-8 {
+        top: -40vh;
+        left: 5vh;
+
+        i {
+            color: $blue;
+        }
+    }
+
+    .layer-9 {
+        top: -30vh;
+        left: 50vh;
+
+        i {
+            color: $yellow;
+        }
+    }
+
+    i {
+        font-size: 40px;
+        margin: 0;
+        padding: 0;
+    }
+}

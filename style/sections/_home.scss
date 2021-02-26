@@ -1,0 +1,75 @@
+#home {
+    height: 100vh;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    padding-top: 30vh;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+
+    // Text description
+    .home-description {
+        margin-top: -5px;
+
+        span {
+            font-size: 16px;
+            color: $secondaryText;
+        }
+    }
+
+    // Social icons
+    .socials {
+        margin: 0;
+        margin-top: 10px;
+        font-size: 26px;
+
+        i {
+            transition: all 0.3s;
+            margin: 0 5px 0 5px;
+
+            &:hover {
+                color: $purple;
+            }
+        }
+    }
+
+    // Contact button
+    .contact-button {
+        margin-top: 10px;
+        display: inline-block;
+
+        button {
+            background-color: $purple;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 12px 20px;
+            border: none;
+            outline: 0px;
+            border-radius: 100px;
+            transition: all 0.3s;
+            cursor: pointer;
+
+            &:hover {
+                padding: 12px 30px;
+            }
+        }
+    }
+
+    .scroll {
+        margin-top: 25vh; // 25 ideal
+        animation-name: floating; 
+        animation-duration: 3s; 
+        animation-iteration-count: infinite; 
+        animation-timing-function: ease-in-out; 
+
+        i {
+            font-size: 24px;
+        }
+        @keyframes floating { 
+            0% { transform: translate(0,  0px); } 
+            50%  { transform: translate(0, 15px); } 
+            100%   { transform: translate(0, -0px); }     
+        }
+    }
+}

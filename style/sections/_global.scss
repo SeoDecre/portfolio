@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+    font-family: Rubik, sans-serif;
+    color: $primaryText;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $backgroundColor;
+    transition: 0.5s;
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+
+    main {
+        margin-left: 290px;
+        transition: all 0.3s;
+
+        // Section container
+        section {
+            padding-top: 110px;
+            //position: relative;
+
+            .pad {
+                display: grid;
+                justify-content: center;
+                padding-right: 20px;
+                padding-left: 20px;
+            }
+        }
+
+        // Global separator
+        .separator {
+            margin-bottom: 100px;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        // Header title
+        .title {
+            animation: 0.5s ease-out 0s 1 bottomToTop;
+        }
+
+        h3 {
+            margin: 0;
+            font-size: 37px;
+            white-space: nowrap;
+        }
+
+        // Circular profile picture
+        .picture {
+            img {
+                border-radius: 50%;
+                height: 110px;
+            }
+        }
+
+        // Responsive row with boxes
+        .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+
+            .box {
+                box-sizing: border-box;
+                padding-right: 20px;
+            }
+        }
+
+        // Loading animation
+        @keyframes bottomToTop {
+            0% {
+                transform: translateY(50%);
+                opacity: 0.0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1.0;
+            }
+        }
+
+        // Media query
+        @include media("<=tablet") {
+            margin-left: 0px;
+            
+            .title {
+                text-align: center;
+            }
+        }
+        
+        @include media("<=desktop") {
+            .row {
+                flex-flow: wrap;
+                justify-content: space-around;
+
+                .box {
+                    padding: 10px 10px;
+                }
+            }
+        }
+    }
+
+}
