@@ -38,23 +38,24 @@ body main section .pad {
   padding-left: 20px;
 }
 
-body main .separator {
-  margin-bottom: 100px;
-}
-
 body main p {
   margin: 0;
 }
 
-body main .title {
-  -webkit-animation: 0.5s ease-out 0s 1 bottomToTop;
-          animation: 0.5s ease-out 0s 1 bottomToTop;
-}
-
-body main h3 {
+body main .title h3 {
   margin: 0;
   font-size: 37px;
   white-space: nowrap;
+}
+
+body main .sub-title h3 {
+  margin: 0;
+  font-size: 30px;
+  white-space: nowrap;
+}
+
+body main .separator {
+  margin-bottom: 100px;
 }
 
 body main .picture img {
@@ -63,70 +64,29 @@ body main .picture img {
 }
 
 body main .row {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 body main .row .box {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding-right: 20px;
-}
-
-@-webkit-keyframes bottomToTop {
-  0% {
-    -webkit-transform: translateY(50%);
-            transform: translateY(50%);
-    opacity: 0.0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1.0;
-  }
-}
-
-@keyframes bottomToTop {
-  0% {
-    -webkit-transform: translateY(50%);
-            transform: translateY(50%);
-    opacity: 0.0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1.0;
-  }
+  position: relative;
+  overflow: hidden;
+  margin: 15px;
 }
 
 @media (max-width: 768px) {
   body main {
     margin-left: 0px;
   }
-  body main .title {
+  body main .title, body main .work-box {
     text-align: center;
-  }
-}
-
-@media (max-width: 900px) {
-  body main .row {
-    -ms-flex-flow: wrap;
-        flex-flow: wrap;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  body main .row .box {
-    padding: 10px 10px;
   }
 }
 
@@ -230,6 +190,12 @@ body main .row .box {
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
   text-align: center;
+}
+
+#home .home-name h3 {
+  margin: 0;
+  font-size: 37px;
+  white-space: nowrap;
 }
 
 #home .home-description {
@@ -440,10 +406,6 @@ body main .row .box {
   padding: 0;
 }
 
-#about {
-  height: 100vh;
-}
-
 #about .about-content .picture img {
   height: 140px;
 }
@@ -451,20 +413,292 @@ body main .row .box {
 #about .about-content .text-content {
   background-color: #0c0c0c;
   padding: 30px;
-  border-radius: 20px;
+  border-radius: 30px;
 }
 
 #about .about-content .interests .box {
   text-align: center;
+  height: 90px;
+  width: 90px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
 }
 
 #about .about-content .interests .box i {
   font-size: 40px;
 }
 
-@media (min-width: 900px) {
-  #about .about-content .picture {
-    margin-right: 80px;
+#experience .experience-content .skills .skills-box {
+  background: #0c0c0c;
+  padding: 30px 60px;
+  border-radius: 30px;
+}
+
+#experience .experience-content .skills .skills-box ul {
+  padding: 0;
+  width: 40vh;
+}
+
+#experience .experience-content .skills .skills-box ul li {
+  position: relative;
+  margin: 40px 5px;
+  list-style: none;
+  font-weight: 500;
+  /* -------------- Languages -------------- */
+  /* -------------- Other skills -------------- */
+}
+
+#experience .experience-content .skills .skills-box ul li .percentage {
+  float: right;
+  font-weight: 300;
+}
+
+#experience .experience-content .skills .skills-box ul li:before {
+  content: "";
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: black;
+  border-radius: 100px;
+}
+
+#experience .experience-content .skills .skills-box ul li:after {
+  content: "";
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  width: 0;
+  height: 8px;
+  border-radius: 100px;
+}
+
+#experience .experience-content .skills .skills-box ul li.java:after {
+  width: 45%;
+  background: #428de8;
+}
+
+#experience .experience-content .skills .skills-box ul li.java .percentage:after {
+  visibility: visible;
+  content: "45%";
+}
+
+#experience .experience-content .skills .skills-box ul li.cpp:after {
+  width: 45%;
+  background: #d35151;
+}
+
+#experience .experience-content .skills .skills-box ul li.cpp .percentage:after {
+  visibility: visible;
+  content: "45%";
+}
+
+#experience .experience-content .skills .skills-box ul li.c:after {
+  width: 40%;
+  background: #51d37a;
+}
+
+#experience .experience-content .skills .skills-box ul li.c .percentage:after {
+  visibility: visible;
+  content: "40%";
+}
+
+#experience .experience-content .skills .skills-box ul li.python:after {
+  width: 45%;
+  background: #e6db62;
+}
+
+#experience .experience-content .skills .skills-box ul li.python .percentage:after {
+  visibility: visible;
+  content: "45%";
+}
+
+#experience .experience-content .skills .skills-box ul li.html-style:after {
+  width: 85%;
+  background: #7b49db;
+}
+
+#experience .experience-content .skills .skills-box ul li.html-style .percentage:after {
+  visibility: visible;
+  content: "85%";
+}
+
+#experience .experience-content .skills .skills-box ul li.js:after {
+  width: 40%;
+  background: #428de8;
+}
+
+#experience .experience-content .skills .skills-box ul li.js .percentage:after {
+  visibility: visible;
+  content: "40%";
+}
+
+#experience .experience-content .skills .skills-box ul li.php:after {
+  width: 10%;
+  background: #d35151;
+}
+
+#experience .experience-content .skills .skills-box ul li.php .percentage:after {
+  visibility: visible;
+  content: "10%";
+}
+
+#experience .experience-content .skills .skills-box ul li.flutter-dart:after {
+  width: 50%;
+  background: #51d37a;
+}
+
+#experience .experience-content .skills .skills-box ul li.flutter-dart .percentage:after {
+  visibility: visible;
+  content: "50%";
+}
+
+#experience .experience-content .skills .skills-box ul li.ph:after {
+  width: 90%;
+  background: #428de8;
+}
+
+#experience .experience-content .skills .skills-box ul li.ph .percentage:after {
+  visibility: visible;
+  content: "90%";
+}
+
+#experience .experience-content .skills .skills-box ul li.ai:after {
+  width: 80%;
+  background: #d35151;
+}
+
+#experience .experience-content .skills .skills-box ul li.ai .percentage:after {
+  visibility: visible;
+  content: "80%";
+}
+
+#experience .experience-content .skills .skills-box ul li.ae:after {
+  width: 70%;
+  background: #51d37a;
+}
+
+#experience .experience-content .skills .skills-box ul li.ae .percentage:after {
+  visibility: visible;
+  content: "70%";
+}
+
+#experience .experience-content .skills .skills-box ul li.vegas:after {
+  width: 95%;
+  background: #e6db62;
+}
+
+#experience .experience-content .skills .skills-box ul li.vegas .percentage:after {
+  visibility: visible;
+  content: "95%";
+}
+
+#experience .experience-content .works .work-box {
+  background: #0c0c0c;
+  padding: 30px 0px;
+  margin: 0px;
+  border-radius: 30px;
+}
+
+#experience .experience-content .works .work-box .box {
+  margin: 10px 40px;
+}
+
+#experience .experience-content .works .tapit .image {
+  height: auto;
+  width: 45vh;
+}
+
+#experience .experience-content .works .tapit .description h3 {
+  margin-bottom: 20px;
+}
+
+#experience .experience-content .works .tapit .description p a {
+  font-weight: 500;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#experience .experience-content .works .tapit .description p a:hover {
+  color: #7b49db;
+}
+
+#experience .experience-content .works .tapit .description button {
+  margin-top: 40px;
+  background-color: #7b49db;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 20px;
+  border: none;
+  outline: 0px;
+  border-radius: 100px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+#experience .experience-content .works .tapit .description button:hover {
+  padding: 12px 30px;
+}
+
+#experience .experience-content .works .tapit .description button a {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  #experience .work {
+    text-align: center;
   }
+  #experience .work .description {
+    margin-left: 100px;
+  }
+}
+
+#contact {
+  height: 75vh;
+}
+
+#contact .contact-content .title {
+  margin-bottom: 30px;
+}
+
+#contact .contact-content form input[type=text], #contact .contact-content form textarea {
+  background-color: #0c0c0c;
+  font-weight: 500;
+  width: 100%;
+  padding: 20px 20px;
+  border: none;
+  outline: 0px;
+  border-radius: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  resize: vertical;
+  margin-bottom: 20px;
+}
+
+#contact .contact-content form textarea {
+  height: 200px;
+}
+
+#contact .contact-content form button {
+  margin: 0 auto;
+  display: block;
+  margin-top: 20px;
+  background-color: #7b49db;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 12px 20px;
+  border: none;
+  outline: 0px;
+  border-radius: 100px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+#contact .contact-content form button:hover {
+  padding: 12px 30px;
 }
 /*# sourceMappingURL=main.css.map */

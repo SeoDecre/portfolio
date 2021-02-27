@@ -8,6 +8,15 @@
     transform: translate(-50%);
     text-align: center;
 
+    // Name
+    .home-name {
+        h3 {
+            margin: 0;
+            font-size: 37px;
+            white-space: nowrap;
+        }
+    }
+
     // Text description
     .home-description {
         margin-top: -5px;

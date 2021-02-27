@@ -21,7 +21,6 @@ body {
         // Section container
         section {
             padding-top: 110px;
-            //position: relative;
 
             .pad {
                 display: grid;
@@ -31,24 +30,29 @@ body {
             }
         }
 
-        // Global separator
-        .separator {
-            margin-bottom: 100px;
-        }
-
         p {
             margin: 0;
         }
 
-        // Header title
         .title {
-            animation: 0.5s ease-out 0s 1 bottomToTop;
+            h3 {
+                margin: 0;
+                font-size: 37px;
+                white-space: nowrap;
+            }
         }
+        .sub-title {
+            h3 {
+                margin: 0;
+                font-size: 30px;
+                white-space: nowrap;
+            }
+        }
+        
 
-        h3 {
-            margin: 0;
-            font-size: 37px;
-            white-space: nowrap;
+        // Global separator
+        .separator {
+            margin-bottom: 100px;
         }
 
         // Circular profile picture
@@ -61,49 +65,27 @@ body {
 
         // Responsive row with boxes
         .row {
+            position: relative;
             display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
 
             .box {
-                box-sizing: border-box;
-                padding-right: 20px;
-            }
-        }
-
-        // Loading animation
-        @keyframes bottomToTop {
-            0% {
-                transform: translateY(50%);
-                opacity: 0.0;
-            }
-
-            100% {
-                transform: translateY(0);
-                opacity: 1.0;
+                position: relative;
+                overflow: hidden;
+                margin: 15px;
             }
         }
 
         // Media query
         @include media("<=tablet") {
             margin-left: 0px;
-            
-            .title {
+
+            .title, .work-box {
                 text-align: center;
             }
         }
-        
-        @include media("<=desktop") {
-            .row {
-                flex-flow: wrap;
-                justify-content: space-around;
 
-                .box {
-                    padding: 10px 10px;
-                }
-            }
-        }
     }
 
 }

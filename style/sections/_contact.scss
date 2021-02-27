@@ -1,0 +1,51 @@
+#contact {
+    height: 75vh;
+
+    .contact-content {
+
+        .title {
+            margin-bottom: 30px;
+        }
+
+        form {
+
+            input[type=text], textarea {
+                background-color: $darkerColor;
+                font-weight: 500;
+                width: 100%;
+                padding: 20px 20px;
+                border: none;
+                outline: 0px;
+                border-radius: 30px;
+                box-sizing: border-box;
+                resize: vertical;
+                margin-bottom: 20px;
+            }
+
+            textarea {
+                height: 200px;
+            }
+
+            button {
+                margin: 0 auto;
+                display: block;
+                margin-top: 20px;
+                background-color: $purple;
+                font-size: 16px;
+                font-weight: 500;
+                padding: 12px 20px;
+                border: none;
+                outline: 0px;
+                border-radius: 100px;
+                transition: all 0.3s;
+                cursor: pointer;
+
+                &:hover {
+                    padding: 12px 30px;
+                }
+            }
+        }
+
+    }
+
+}
