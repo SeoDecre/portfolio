@@ -18,11 +18,22 @@ body {
         margin-left: 290px;
         transition: all 0.3s;
 
+        p {
+            margin: 0;
+        }
+
+        .link {
+            color: $purple;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s ease-in-out;
+        }
+
         // Section container
         section {
-            padding-top: 110px;
-
+            // border-top: 5px solid $darkerColor;
             .pad {
+                margin: auto;
                 display: grid;
                 justify-content: center;
                 padding-right: 20px;
@@ -30,11 +41,8 @@ body {
             }
         }
 
-        p {
-            margin: 0;
-        }
-
         .title {
+            text-align: left;
             h3 {
                 margin: 0;
                 font-size: 37px;
@@ -50,9 +58,12 @@ body {
         }
         
 
-        // Global separator
+        // Global separators
         .separator {
             margin-bottom: 100px;
+        }
+        .small-separator {
+            margin-bottom: 50px;
         }
 
         // Circular profile picture
@@ -67,6 +78,7 @@ body {
         .row {
             position: relative;
             display: flex;
+            align-items: center;
             justify-content: center;
             flex-wrap: wrap;
 
@@ -79,13 +91,23 @@ body {
 
         // Media query
         @include media("<=tablet") {
-            margin-left: 0px;
+            margin-left: 20px;
 
             .title, .work-box {
                 text-align: center;
             }
+            .work-box {
+                width: 45vh;
+                .box {
+                    display: flex;
+                    .image {
+                        img {
+                            width: 80%;
+                        }
+                    }
+                }
+            }
         }
-
     }
 
 }

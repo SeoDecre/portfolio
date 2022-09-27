@@ -1,15 +1,18 @@
 #experience {
-
     .experience-content {
+
+        // Skills section
         .skills {
+        align-items: flex-start;
+
             .skills-box {
                 background: $darkerColor;
-                padding: 30px 60px;
-                border-radius: 30px;
+                padding: 30px 50px;
+                border-radius: 20px;
 
                 ul {
                     padding: 0;
-                    width: 40vh;
+                    width: 35vh;
 
                     li {
                         position: relative;
@@ -44,115 +47,205 @@
                         }
 
                         /* -------------- Languages -------------- */
-                        &.java {
+                        &.dart {
                             &:after {
-                                width: 45%;
-                                background: $blue;
+                                width: 95%;
+                                background: $purple;
                             }
 
                             .percentage:after {
-                                visibility: visible;
+                                visibility: hidden;
+                                content: "50%";
+                            }
+                        }
+                        &.java {
+                            &:after {
+                                width: 85%;
+                                background: $red;
+                            }
+
+                            .percentage:after {
+                                visibility: hidden;
                                 content: "45%";
                             }
                         }
                         &.cpp {
                             &:after {
-                                width: 45%;
-                                background: $red;
-                            }
-
-                            .percentage:after {
-                                visibility: visible;
-                                content: "45%";
-                            }
-                        }
-                        &.c {
-                            &:after {
-                                width: 40%;
-                                background: $green;
-                            }
-
-                            .percentage:after {
-                                visibility: visible;
-                                content: "40%";
-                            }
-                        }
-                        &.python {
-                            &:after {
-                                width: 45%;
-                                background: $yellow;
-                            }
-
-                            .percentage:after {
-                                visibility: visible;
-                                content: "45%";
-                            }
-                        }
-                        &.html-style {
-                            &:after {
-                                width: 85%;
-                                background: $purple;
-                            }
-
-                            .percentage:after {
-                                visibility: visible;
-                                content: "85%";
-                            }
-                        }
-                        &.js {
-                            &:after {
-                                width: 40%;
+                                width: 70%;
                                 background: $blue;
                             }
 
                             .percentage:after {
-                                visibility: visible;
-                                content: "40%";
+                                visibility: hidden;
+                                content: "45%";
                             }
                         }
-                        &.php {
-                            &:after {
-                                width: 10%;
-                                background: $red;
-                            }
-
-                            .percentage:after {
-                                visibility: visible;
-                                content: "10%";
-                            }
-                        }
-                        &.flutter-dart {
+                        &.c {
                             &:after {
                                 width: 50%;
                                 background: $green;
                             }
 
                             .percentage:after {
-                                visibility: visible;
-                                content: "50%";
+                                visibility: hidden;
+                                content: "40%";
                             }
                         }
-
-                        /* -------------- Other skills -------------- */
-                        &.ph {
+                        &.html-style {
                             &:after {
-                                width: 90%;
+                                width: 95%;
+                                background: $yellow;
+                            }
+
+                            .percentage:after {
+                                visibility: hidden;
+                                content: "85%";
+                            }
+                        }
+                        &.js {
+                            &:after {
+                                width: 80%;
+                                background: $purple;
+                            }
+
+                            .percentage:after {
+                                visibility: hidden;
+                                content: "40%";
+                            }
+                        }
+                        &.php {
+                            &:after {
+                                width: 70%;
+                                background: $red;
+                            }
+
+                            .percentage:after {
+                                visibility: hidden;
+                                content: "10%";
+                            }
+                        }
+                        &.python {
+                            &:after {
+                                width: 30%;
                                 background: $blue;
                             }
 
                             .percentage:after {
-                                visibility: visible;
+                                visibility: hidden;
+                                content: "45%";
+                            }
+                        }
+
+                        /* -------------- Frameworks & architectures -------------- */
+                        &.fl {
+                            &:after {
+                                width: 85%;
+                                background: $green;
+                            }
+
+                            .percentage:after {
+                                visibility: hidden;
+                                content: "90%";
+                            }
+                        }
+                        &.jfx {
+                            &:after {
+                                width: 60%;
+                                background: $yellow;
+                            }
+
+                            .percentage:after {
+                                visibility: hidden;
+                                content: "80%";
+                            }
+                        }
+                        &.qt {
+                            &:after {
+                                width: 60%;
+                                background: $purple;
+                            }
+
+                            .percentage:after {
+                                visibility: hidden;
+                                content: "80%";
+                            }
+                        }
+                        &.mdb {
+                            &:after {
+                                width: 70%;
+                                background: $red;
+                            }
+
+                            .percentage:after {
+                                visibility: hidden;
+                                content: "70%";
+                            }
+                        }
+                        &.fb {
+                            &:after {
+                                width: 70%;
+                                background: $blue;
+                            }
+
+                            .percentage:after {
+                                visibility: hidden;
+                                content: "95%";
+                            }
+                        }
+                        &.node {
+                            &:after {
+                                width: 75%;
+                                background: $green;
+                            }
+
+                            .percentage:after {
+                                visibility: hidden;
+                                content: "95%";
+                            }
+                        }
+                        &.gh {
+                            &:after {
+                                width: 90%;
+                                background: $yellow;
+                            }
+
+                            .percentage:after {
+                                visibility: hidden;
+                                content: "95%";
+                            }
+                        }
+                        &.docker {
+                            &:after {
+                                width: 60%;
+                                background: $purple;
+                            }
+
+                            .percentage:after {
+                                visibility: hidden;
+                                content: "95%";
+                            }
+                        }
+                        
+                        /* -------------- Other skills -------------- */
+                        &.ph {
+                            &:after {
+                                width: 90%;
+                                background: $red;
+                            }
+
+                            .percentage:after {
+                                visibility: hidden;
                                 content: "90%";
                             }
                         }
                         &.ai {
                             &:after {
                                 width: 80%;
-                                background: $red;
+                                background: $blue;
                             }
 
                             .percentage:after {
-                                visibility: visible;
+                                visibility: hidden;
                                 content: "80%";
                             }
                         }
@@ -163,7 +256,7 @@
                             }
 
                             .percentage:after {
-                                visibility: visible;
+                                visibility: hidden;
                                 content: "70%";
                             }
                         }
@@ -174,7 +267,7 @@
                             }
 
                             .percentage:after {
-                                visibility: visible;
+                                visibility: hidden;
                                 content: "95%";
                             }
                         }
@@ -184,21 +277,18 @@
             }
         }
 
+        // Works section
         .works {
             .work-box {
                 background: $darkerColor;
-                padding: 30px 0px;
-                margin: 0px;
-                border-radius: 30px;
-                .box {
-                    margin: 10px 40px;
-                }
-            }
+                padding: 30px 10px;
+                border-radius: 20px;
 
-            .tapit {
                 .image {
-                    height: auto;
-                    width: 45vh;
+                    width: 400px;
+                    img {
+                        max-width: 100vh;
+                    }
                 }
 
                 .description {
@@ -214,6 +304,7 @@
                             }
                         }
                     }
+                    
                     button {
                         margin-top: 40px;
                         background-color: $purple;
@@ -222,7 +313,7 @@
                         padding: 12px 20px;
                         border: none;
                         outline: 0px;
-                        border-radius: 100px;
+                        border-radius: 10px;
                         transition: all 0.3s;
                         cursor: pointer;
 
@@ -234,16 +325,14 @@
                         }
                     }
                 }
-            }
-        }
-    }
 
-    // Media query
-    @include media("<=tablet") {
-        .work {
-            text-align: center;
-            .description {
-                margin-left: 100px;
+                .app-link {
+                    background-color: $purple;
+                    i {
+                        font-size: 30px;
+                        color: white;
+                    }
+                }
             }
         }
     }

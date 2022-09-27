@@ -1,6 +1,5 @@
 #home {
     height: 100vh;
-    height: 100%;
     width: 100%;
     position: relative;
     padding-top: 30vh;
@@ -50,13 +49,14 @@
 
         button {
             background-color: $purple;
+            color: white;
             font-size: 16px;
             font-weight: 500;
             padding: 12px 20px;
             border: none;
             outline: 0px;
-            border-radius: 100px;
-            transition: all 0.3s;
+            border-radius: 10px;
+            transition: all 0.4s;
             cursor: pointer;
 
             &:hover {
@@ -76,9 +76,9 @@
             font-size: 24px;
         }
         @keyframes floating { 
-            0% { transform: translate(0,  0px); } 
-            50%  { transform: translate(0, 15px); } 
-            100%   { transform: translate(0, -0px); }     
+            0% { transform: translate(0,  -0px); } 
+            50%  { transform: translate(0, -15px); } 
+            100%   { transform: translate(0, 0px); }     
         }
     }
 }

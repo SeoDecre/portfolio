@@ -1,5 +1,4 @@
 #about {
-
     .about-content {
         .picture {
             img {
@@ -10,7 +9,7 @@
         .text-content {
             background-color: $darkerColor;
             padding: 30px;
-            border-radius: 30px;
+            border-radius: 15px;
         }
 
         // Icons grid row
@@ -21,9 +20,21 @@
                 width: 90px;
                 display: grid;
                 place-items: center;
+                
+                .la-code {color: $purple;}
+                .la-square-root-alt {color: $red;}
+                .la-pen {color: $blue;}
+                .la-film {color: $green;}
+                .la-chess {color: $yellow;}
+                .la-mug-hot {color: $purple;}
+                .la-cat {color: $red;}
 
                 i {
                     font-size: 40px;
+                    transition: all 0.3s;
+                    &:hover {
+                        font-size: 50px;
+                    }
                 }
             }
         }

@@ -1,8 +1,10 @@
 .sidebar {
     color: $primaryText;
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    // border-right: 1px solid rgba(255, 255, 255, 0.1);
+    background: $darkerColor;
     padding: 10px 40px;
     overflow-y: auto;
+    flex-direction: column;
     height: 100vh;
     width: 290px;
     transition: all 0.3s;
@@ -25,7 +27,11 @@
         color: $primaryText;
         list-style-type: none;
         padding: 0;
-        margin: 130px 0px 130px 0px;
+        margin: 0;
+        position: absolute;
+        top: 40%;
+        -ms-transform: translateY(-40%);
+        transform: translateY(-40%);
     
         a {
             font-size: 16px;
@@ -42,7 +48,7 @@
 
         li {
             padding: 8px 0px;
-
+            
             .home:hover {color: $red;}
             .about:hover {color: $blue;}
             .experience:hover {color: $green;}
@@ -58,7 +64,8 @@
 
     // Footer
     .footer {
-        margin-top: auto;
+        position: fixed;
+        bottom: 20px;
         p {
             color: $tertiaryText;
             font-size: 14px;
